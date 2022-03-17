@@ -1,0 +1,151 @@
+:root {
+    /* --background:seashell; */
+    /* --background:FloralWhite; */
+    --background:FloralWhite;
+    --text: white;
+    --lighter: #ffffff7f;
+    --darker: #00000020;
+}
+
+::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+    background: var(--darker);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--lighter);
+    border-radius: 1ex;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+::-webkit-scrollbar-corner {
+    background: #000;
+}
+body{
+    margin-left: 0;
+    background: black;
+    scrollbar-width: thin;
+    /* scrollbar-color: red yellow; */
+    touch-action: auto;
+}
+.c149{
+    background: var(--background);
+}
+.c92 {
+    padding: 0;
+}
+.head{
+    display: inline-block;
+    height: 3rem;
+    width: 100vw;
+    position: sticky;
+    top: 0;
+    background: var(--background);
+    z-index: 3;
+}
+.cont{
+    display: flex;
+    flex-direction: column;
+    /*margin: auto;
+    width: 50%; */
+}
+.page{
+    display: intital;
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+   /* background: darkgoldenrod;*/
+    background: transparent;
+}
+.button{
+    z-index: 2;
+    /* width: 100%; */
+    background: var(--lighter);
+    border-radius: .5rem;
+    border: none;
+    padding: 2rem;
+    position: sticky;
+    top: 0;
+}
+.lighten{
+    z-index: 11;
+    background: var(--background);
+    position: sticky;
+    top: 0;
+}
+.indice{
+    display: block;
+    height: 100vh;
+    width: 200%;
+    position: sticky;
+    top: 0;
+    overflow-y:scroll;
+    padding: 2rem;
+    background: var(--background);
+    z-index: 9;
+    /* background: #0000001a; */
+}
+
+.indice a:hover{
+    border-bottom: 1px solid #0000007c;
+    background: 	#ffffff7c;
+}    
+.contents{
+    z-index: 8;
+    padding: 2rem;
+    border-radius: 2rem;
+    
+    /*background: tomato;*/
+    background: #ffffff1a;
+}
+
+.foot{
+    font-size:medium;
+    height: 3rem;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: var(--background);
+    z-index: 12;
+}
+.bottom_row{
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem;
+    justify-content:flex-start;
+    gap: 2rem;
+}
+/* .autor{
+    font-size: large;
+} */
+
+
+h1:hover, h2:hover, h3:hover, h4:hover{
+   transition: all .2s ease-in-out; 
+   transform: scale(1.1); 
+}
+.c4{
+    margin-bottom: 2rem;
+    background: transparent;
+}
+.c4:hover{
+    border-bottom: 1px solid #0000007c;
+    background: 	#ffffff7c;
+}    
+
+.c52{
+    margin:2rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .page{
+        flex-direction: column ;
+    }
+    .indice{
+        max-width: 90%;
+    }
+
+  }
