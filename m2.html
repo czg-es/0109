@@ -15,10 +15,10 @@
     <container class="cont">
         <div class="page">
             <div class="lighten">
-            <button id="hide_index " class="button" onclick="toggle_indx()"> HIDE</button> 
+            <button id="hide_index " class="button" onclick="toggle_indx()"> INDICE</button> 
             </div>
             <div id="index" class="indice">
-                <h1>indice</h1>
+                <!-- <h1>indice</h1> -->
                 
                 <p class="c6 c9"><span class="c7 c2"></span></p>
                 <p class="c6"><span class="c2 c60">CONTENIDO:</span></p>
@@ -153,7 +153,7 @@
                 <hr style="page-break-before: always; display: none;" />
             </div>
             <div class="contents">
-                <h1>contenido</h1>
+                <!-- <h1>contenido</h1> -->
                 <p class="c44 title" id="h.r7z1a0mpjymu"><span class="c54 c63 c68">- <br> MÓDULO 2</span></p>
                 <p class="c6 c9"><span class="c1"></span></p>
                 <p class="c6 c9"><span class="c54 c62"></span></p>
@@ -1802,10 +1802,23 @@
             <div class="autor">&nbsp;&nbsp;CZG &copy; 2022</div>
             <a href="m1.html">Modulo 1</a>
             <a href="m2.html">Modulo 2</a>
+            <a href="m3.html">Modulo 3</a>
+            <button id="t_m" onclick="toggle_mode();"></button>
         </div>
     </footer>
 </body>
+    <script src="color.js"></script>
     <script>
+            var foot = document.getElementsByClassName("bottom_row");
+            /* foot[0].style.setProperty('background', 'var(--darker)'); */
+            var a_list = foot[0].getElementsByTagName('a');
+            a_list[2].style.cssText =`
+                            text-transform: uppercase;
+                            background: var(--darker);
+                            padding: 0 1em 0 1em;
+                            border-left: solid 5px var(--lighter);
+                            `
+
         
         function toggle_indx() {
             var x = document.getElementById("index");
@@ -1815,7 +1828,7 @@
                 x.style.display = "none";
             }
         }    
-            
+        parent.refresh();  
     </script>
     
 </html>

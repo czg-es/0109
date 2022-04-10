@@ -8,7 +8,25 @@
     <title>AP</title>
 </head>
 <body>
-    <iframe src="m1.html" frameborder="0"></iframe>
-    
+    <iframe src="m1.html" frameborder="0" id="frame1"></iframe>
+    <script>
+        //Reference iframe
+        var child = document.getElementById('frame1').contentWindow;
+        // delay the exec so the frame and scripts are loaded.
+        function callfunc(){
+	        setTimeout('refresh()',500);
+        }
+        // refresh mode based on window.name
+        function refresh(){
+            /* document.getElementById('frame1').contentWindow.change_c('gainsboro'); */
+            child = document.getElementById('frame1').contentWindow;
+            window.name == 'day'?  child.day() : child.night();
+        }
+        // call the refresh function with a delay.
+        callfunc();
+        // refresh window.name.
+        window.name == 'night'?  window.name='night': window.name = 'day';
+        console.log('---->'+ window.name);
+    </script>
 </body>
 </html>

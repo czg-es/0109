@@ -5,6 +5,7 @@
     --text: white;
     --lighter: #ffffff7f;
     --darker: #00000020;
+    --text: #ff0000;
 }
 
 ::-webkit-scrollbar {
@@ -24,7 +25,7 @@
 }
 body{
     margin-left: 0;
-    background: black;
+    /* background: black; */
     scrollbar-width: thin;
     /* scrollbar-color: red yellow; */
     touch-action: auto;

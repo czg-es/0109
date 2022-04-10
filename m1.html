@@ -15,10 +15,10 @@
     <container class="cont">
         <div class="page">
             <div class="lighten">
-            <button id="hide_index " class="button" onclick="toggle_indx()"> HIDE</button> 
+            <button id="hide_index " class="button" onclick="toggle_indx()"> INDICE</button> 
             </div>
             <div id="index" class="indice">
-                <h1>indice</h1>
+                <!-- <h1>indice</h1> -->
                 <p class="c0 c1"><span class="c10 c91"></span></p>
                 <p class="c0"><span class="c10 c91">INDICE</span></p>
                 <p class="c49 c138">
@@ -263,7 +263,7 @@
                 <hr style="page-break-before: always; display: none;" />
             </div>
             <div class="contents">
-            <h1>contenido</h1>
+            <!-- <h1>contenido</h1> -->
             <p class="c0"><span class="c10 c147">- <br> MÓDULO 1</span></p>
             <p class="c0 c1"><span class="c10 c91"></span></p>
             <p class="c0 c1"><span class="c10 c91"></span></p>
@@ -3970,10 +3970,23 @@
                 <div class="autor">&nbsp;&nbsp;CZG &copy; 2022</div>
                 <a href="m1.html">Modulo 1</a>
                 <a href="m2.html">Modulo 2</a>
+                <a href="m3.html">Modulo 3</a>
+                <button id="t_m" onclick="toggle_mode();"></button>
+                <input type="text" name="colour" id="colour" onchange="change_c(this.value);" style="background:transparent;">
             </div>
         </footer>
 </body>
+        <script src="color.js"></script>
         <script>
+            var foot = document.getElementsByClassName("bottom_row");
+            /* foot[0].style.setProperty('background', 'var(--darker)'); */
+            var a_list = foot[0].getElementsByTagName('a');
+            a_list[1].style.cssText =`
+                            text-transform: uppercase;
+                            background: var(--darker);
+                            padding: 0 1em 0 1em;
+                            border-left: solid 5px var(--lighter);
+                            `
             
             function toggle_indx() {
                 var x = document.getElementById("index");
@@ -3982,7 +3995,8 @@
                 } else {
                     x.style.display = "none";
                 }
-            }    
+            } 
+            parent.refresh();   
                 
         </script>
         

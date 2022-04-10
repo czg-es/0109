@@ -3,7 +3,11 @@ body {
 }
 iframe {
     display: block;       /* iframes are inline by default */
-    background: floralwhite;
+    /* background: url('images/texture.jpg') center; 
+    background-size: contain;
+    */
+    /* background: transparent; */
+    background-image: linear-gradient(grey, white);
     border: none;         /* Reset default border */
     height: 100vh;        /* Viewport-relative units */
     width: 100vw;
